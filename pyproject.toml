@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "com_postgres_test_utils"
+version = "0.1.0"
+description = "Pytest fixtures providing a connection pool to the postgres that was previously set up inside a docker container"
+authors = [
+    "Danila Korobkov <korobkov.danila.yurevich@gmail.com>",
+]
+maintainers = [
+    "Danila Korobkov <korobkov.danila.yurevich@gmail.com>",
+]
+readme = "README.md"
+homepage = "https://github.com/DanilaKorobkov/com_postgres_test_utils"
+repository = "https://github.com/DanilaKorobkov/com_postgres_test_utils"
+documentation = "https://github.com/DanilaKorobkov/com_postgres_test_utils/browse/README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aiohttp = "^3.7"
+asyncpg = "^0.23"
+attrs = "^21.2"
+docker = "^5.0"
+
+[tool.poetry.dev-dependencies]
+add-trailing-comma = "^2.1"
+autopep8 = "^1.5"
+bandit = "^1.7"
+flake8 = "^3.9"
+isort = "^5.8"
+mypy = "^0.812"
+pylint = "^2.8"
+pytest = "^6.2"
+pytest-cov = "^2.12"
+pytest-sugar = "^0.9"
+
+[build-system]
+requires = ["poetry-core>=1.0"]
+build-backend = "poetry.core.masonry.api"
