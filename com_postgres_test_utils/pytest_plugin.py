@@ -35,7 +35,7 @@ def com_postgres_url(com_postgres_config: PostgresConfig) -> Iterator[URL]:
 async def com_postgres_pool(
     com_postgres_url: URL,
     loop: asyncio.AbstractEventLoop,
-) -> AsyncIterator[asyncpg.Connection]:
+) -> AsyncIterator[asyncpg.Pool]:
     assert loop.is_running()
 
     async with up_postgres_pool(com_postgres_url) as pool:
