@@ -68,7 +68,7 @@ async def _wait_postgres_setup(url: URL) -> None:
         try:
             await asyncpg.connect(str(url))
         except ConnectionError:
-            await asyncio.sleep(0.05)
+            await asyncio.sleep(0.5)
         else:
             return
     raise RuntimeError("Could not connect to the Postgres")
